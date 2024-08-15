@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/top-bar.css">
+        <link rel="stylesheet" href="./css/side-bar.css">
+        <link rel="stylesheet" href="./css/orders.css">
+        <link rel="icon" type="image/x-icon" href="/img/saturn.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <title>Saturn - Orders</title>
+    </head>
+    <body>
+        <nav id="top-bar">
+            <a href="/orders">
+                <img id="top-bar-icon" src="/img/saturn.png">
+            </a>
+            <a id="button-logout">
+                <img id="top-bar-icon-logout" src="/img/logout.svg">
+            </a>
+        </nav>
+        <nav id="side-bar">
+            <ul>
+                <li>
+                    <a href="/orders">
+                        <img src="img/home-enabled.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="/menu">
+                        <img src="img/menu.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="/tables">
+                        <img src="img/table.svg">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h1 id="content-title">Orders</h1>
+            <div id="orders-filters">
+                <button value="all" class="orders-filters-button active">All</button>
+                <button value="new" class="orders-filters-button">New</button>
+                <button value="read" class="orders-filters-button">Readed</button>
+                <button value="ready" class="orders-filters-button">Ready</button>
+                <button value="cancelled" class="orders-filters-button">Cancelled</button>
+                <button value="finished" class="orders-filters-button">Finished</button>
+            </div>
+            <div id="cards">
+            </div>
+        </div>
+    </body>
+    <div id="alert-div"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/alert.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/order.js"></script>
+</html>

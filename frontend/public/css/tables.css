@@ -1,0 +1,16 @@
+#content-div {
+    margin-top: 2rem;
+    display: flex;
+    cursor: auto;
+}
+
+#table-card {
+    background-color: white;
+    border: 5px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 0.1);
+    padding: 15px;
+    margin-left: 3rem;
+    min-width: 50%;
+    height: 100%;
+}

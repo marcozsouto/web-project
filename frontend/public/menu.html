@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/top-bar.css">
+        <link rel="stylesheet" href="./css/side-bar.css">
+        <link rel="stylesheet" href="./css/form.css">
+        <link rel="stylesheet" href="./css/tables.css">
+        <link rel="stylesheet" href="./css/table.css">
+        <link rel="icon" type="image/x-icon" href="/img/saturn.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <title>Saturn - Menu</title>
+    </head>
+    <body>
+        <nav id="top-bar">
+            <a href="/orders">
+                <img id="top-bar-icon" src="/img/saturn.png">
+            </a>
+            <a id="button-logout">
+                <img id="top-bar-icon-logout" src="/img/logout.svg">
+            </a>
+        </nav>
+        <nav id="side-bar">
+            <ul>
+                <li>
+                    <a href="/orders">
+                        <img src="img/home.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="/menu">
+                        <img src="img/menu-enabled.svg">
+                    </a>
+                </li>
+                <li>
+                    <a href="/tables">
+                        <img src="img/table.svg">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h1 id="content-title">Menu</h1>
+            <div id="content-div">
+                <section id="form">
+                    <h3 id="form-title">New Item</h3>
+                    <section>
+                        <label id="input-label">Name</label>
+                        <input class="input-form create input-input" name="name" id="" type="text" placeholder="Saturn">
+                    </section>
+                    <section>
+                        <label id="input-label">Description</label>
+                        <input class="input-form create input-input" name="description" id="" type="text" placeholder="Item description">
+                    </section>
+                    <section>
+                        <label id="input-label">Price</label>
+                        <input class="input-form create input-input" name="price" id="" type="number" min="1" step="any" placeholder="0.01">
+                    </section>
+                    <section>
+                        <label id="input-label">Image</label>
+                        <div class="div-image-upload">
+                            <span id="file-close" class="file-close button delete" data-type="create">
+                                <img src="/img/delete.svg">
+                            </span>
+                            <input class="input-form create input-input file-uploader" data-type="create" name="image" type="file" accept="image/png, image/gif, image/jpeg">
+                            <img class="input-input img-input file-uploader-image" data-type="create" name="image">
+                        </div>
+                    </section>
+                    <input id="input-button" class="input-button" type="submit" value="Save">
+                </section>
+                <section id="table-card">
+                    <section class="table-search-section">
+                        <input class="input-input" value="" id="search" type="text" placeholder="Search">
+                    </section>
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <th class="fill-content">Name</th>
+                                <th class="center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-content">
+
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </body>
+
+    <div id="modal-hover" class="disabled">
+            <div id="content-div">
+                <section id="form">
+                    <h3 id="form-title">Edit Item</h3>
+                    <section>
+                        <label id="input-label">Name</label>
+                        <input class="input-form edit input-input" name="name" id="" type="text" placeholder="Saturn">
+                    </section>
+                    <section>
+                        <label id="input-label">Description</label>
+                        <input class="input-form edit input-input" name="description" id="" type="text" placeholder="Item description">
+                    </section>
+                    <section>
+                        <label id="input-label">Price</label>
+                        <input class="input-form edit input-input" name="price" id="" type="number" min="1" step="any" placeholder="0.01">
+                    </section>
+                    <section>
+                        <label id="input-label">Image</label>
+                        <div class="div-image-upload">
+                            <span id="file-close" class="file-close button delete" data-type="edit">
+                                <img src="/img/delete.svg">
+                            </span>
+                            <input class="input-form edit input-input file-uploader" data-type="edit" name="image" type="file" accept="image/png, image/gif, image/jpeg">
+                            <img class="input-input img-input file-uploader-image" data-type="edit" name="image">
+                        </div>
+                    </section>
+                    <input id="input-button-edit" class="input-button" type="submit" value="Save">
+                </section>
+            </div>
+    </div>
+    <div id="alert-div"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/alert.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/menu.js"></script>
+</html>

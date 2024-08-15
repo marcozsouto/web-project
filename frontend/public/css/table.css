@@ -1,0 +1,79 @@
+#table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#table th {
+    border-top: 1px solid var(--gray-default);
+}
+
+#table th:not(:first-child) {
+    border-left: 1px solid var(--gray-default);
+}
+
+
+#table tr:not(:first-child) td {
+    border-top: 1px solid var(--gray-default);
+}
+
+#table tr td:not(:first-child) {
+    border-left: 1px solid var(--gray-default);
+}
+
+#table tr:last-child td {
+    border-bottom: 1px solid var(--gray-default);
+}
+
+#table tr td:not(:last-child) {
+    border-right: 1px solid var(--gray-default);
+}
+
+#table th {
+    padding: 11px 0;
+    text-align: left;
+    font-size: 1.3rem;
+}
+
+#table th.center {
+    text-align: center;
+}
+
+#table th.fill-content {
+    width: 100%;
+}
+
+#table td {
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.button-group {
+    display: flex;
+    margin-left: .5rem;
+}
+
+.button {
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+.button.edit {
+    background-color: rgba(var(--green-default), 0.2);
+}
+
+.button.delete {
+    background-color: rgba(var(--red-default), 0.2);
+}
+
+.button > img {
+    width: 20px;
+    height: 20px;
+}
+
+.table-search-section {
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,42 @@
+#top-bar {
+    background-color: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+}
+
+#top-bar > a {
+    display: flex;
+    cursor: pointer;
+}
+
+#top-bar-icon {
+    width: 55px;
+    height: 55px;
+    margin: 10px;
+}
+
+#top-bar-icon-logout {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    margin-right: 25px;
+}
+
+#content {
+    display: block;
+    position: fixed;
+    top: 75px;
+    left: 70px;
+    background-color: var(--input-background-color);
+    width: calc(100% - 140px);
+    height: calc(100% - 145px);
+    padding: 35px;
+    overflow-y: auto;
+}
+
+#content-title {
+    margin: 0;
+    font-size: 2.5rem;
+}

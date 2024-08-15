@@ -1,0 +1,31 @@
+:root {
+    --saturn-default: #6e76e5;
+    --yellow-default: 223, 161, 53;
+    --green-default: 37, 144, 53;
+    --red-default: 252, 97, 93;
+    --pink-default: 211, 179, 236;
+    --purple-default: 169, 53, 223;
+    --gray-default: #C5C5C5;
+    --black-default: #434343;
+    --input-background-color: #E5E5E5;
+    --saturn-default-rgb: 110, 118, 229;
+    --black-default-rgb: 67, 67, 67;
+}  
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--black-default);
+}
+
+html, body {
+    height: 100%;
+}
+
+html, body, header, nav, main, section, footer {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-file-upload-button {
+    display: none;
+}

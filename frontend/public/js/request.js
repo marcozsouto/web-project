@@ -13,6 +13,8 @@ class ApiService {
                 },
             });
 
+            this.checkIsUnauthorized(response);
+
             return await response.json();
         } catch (error) {
             console.error('Error fetching data:', error);
@@ -30,6 +32,8 @@ class ApiService {
                 body: JSON.stringify(data),
             });
 
+            this.checkIsUnauthorized(response);
+
             return await response.json();
         } catch (error) {
             console.error('Error posting data:', error);
@@ -46,6 +50,9 @@ class ApiService {
                 },
                 body: JSON.stringify(data),
             });
+            
+            this.checkIsUnauthorized(response);
+
             return await response.json();
         } catch (error) {
             console.error('Error updating data:', error);
@@ -61,10 +68,19 @@ class ApiService {
                     'Authorization': 'Bearer ' + this.getToken(isAuthorized),
                 }
             });
+
+            this.checkIsUnauthorized(response);
             
             return await response.json();
         } catch (error) {
             console.error('Error deleting data:', error);
+        }
+    }
+
+    checkIsUnauthorized(response) {
+        if (response.status == 401) {
+            this.clearToken();
+            window.location = '/';
         }
     }
 

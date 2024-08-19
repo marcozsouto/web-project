@@ -12,7 +12,7 @@ export default class AuthService {
         }
 
         const accessToken = jwt.sign(
-            user.dataValues,
+            {id: user.id},
             String(process.env.ACCESS_TOKEN_PRIVATE_KEY),
             { expiresIn: '12h', algorithm: 'HS256' }
         )

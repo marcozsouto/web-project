@@ -33,7 +33,7 @@ class Auth {
             req.user = await User.findByPk(uncoded.id)
             next()
         } catch (err) {
-            return res.status(500).json({
+            return res.status(401).json({
                 auth: false,
                 message: 'Failed to authenticate token.',
             })

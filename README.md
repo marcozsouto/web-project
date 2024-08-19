@@ -18,13 +18,7 @@ npm install
 npm start
 ```
 
-você pode mudar as portas no .env mas caso você mude o back não esqueça de alterar o .env do front
-
-```
-API_URL=http://localhost:<PORTA QUE VOCÊ MUDOU NO BACK>/
-```
-
-se você quiser rodar as migrations para gerar o banco sqlite
+se você quiser rodar as migrations para gerar o banco sqlite (não esqueca de remover o database.db)
 
 ```
 npm run migrate:up
